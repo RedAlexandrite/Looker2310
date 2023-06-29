@@ -10,7 +10,7 @@ project_name: "testing_john2310"
 remote_dependency: import_block {
   url: "git@github.com:RedAlexandrite/Looker_V230.git"
   ref: "master"
- # override_constant: connection {
-  #  value: "importing_project_connection"
-  #}
+#  override_constant: connection {
+#    value: "thelook"
+#  }
 }
