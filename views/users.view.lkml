@@ -1,6 +1,6 @@
 view: users {
   sql_table_name: demo_db.users ;;
-  drill_fields: [id]
+  drill_fields: [city, state, detail*]
 
   dimension: id {
     primary_key: yes
@@ -48,24 +48,25 @@ view: users {
   dimension: zip {
     type: zipcode
     sql: ${TABLE}.zip ;;
+    drill_fields: [state, city]
   }
   measure: count {
     type: count
-    drill_fields: [detail*]
+    drill_fields: [state, city]
   }
 
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-	id,
-	first_name,
-	last_name,
-	events.count,
-	orders.count,
-	saralooker.count,
-	sindhu.count,
-	user_data.count
-	]
+  id,
+  first_name,
+  last_name,
+  events.count,
+  orders.count,
+  saralooker.count,
+  sindhu.count,
+  user_data.count
+  ]
   }
 
 }
