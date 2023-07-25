@@ -1,6 +1,6 @@
 view: order_items {
   sql_table_name: demo_db.order_items ;;
-  drill_fields: [id]
+  #drill_fields: [id,sale_price]
 
   dimension: id {
     primary_key: yes

@@ -1,6 +1,6 @@
 view: users {
   sql_table_name: demo_db.users ;;
-  drill_fields: [city, state, detail*]
+  #drill_fields: [city, state, detail*]
 
   dimension: id {
     primary_key: yes
@@ -50,6 +50,10 @@ view: users {
     sql: ${TABLE}.zip ;;
     drill_fields: [state, city]
   }
+  dimension: complete_name {
+    type: string
+    sql: CONCAT(${first_name}," ",${last_name}) ;;
+  }
   measure: count {
     type: count
     drill_fields: [state, city]
@@ -62,10 +66,7 @@ view: users {
   first_name,
   last_name,
   events.count,
-  orders.count,
-  saralooker.count,
-  sindhu.count,
-  user_data.count
+  orders.count
   ]
   }
 
