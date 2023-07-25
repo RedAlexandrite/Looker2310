@@ -54,18 +54,27 @@ view: users {
     type: string
     sql: CONCAT(${first_name}," ",${last_name}) ;;
   }
+  dimension: genre_test {
+    sql: case
+    when ${gender} = "f" then "Female"
+    when ${gender} = "m" then "Male"
+    else "Unknown"
+    end;;
+  }
   measure: count {
-    type: count
-    drill_fields: [state, city]
+    type: number
+    sql: case
+    when ${complete_name};;
+    drill_fields: [detail*]
   }
 
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
   id,
-  first_name,
-  last_name,
+  complete_name,
   events.count,
+  genre_test,
   orders.count
   ]
   }
