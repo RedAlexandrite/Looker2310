@@ -5,6 +5,8 @@ include: "/views/**/*.view.lkml"
 
 include: "//import_block/Dashboards/*"
 
+include: "/Explores/test.explore.lkml"
+
 datagroup: testing_john2310_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
@@ -14,19 +16,19 @@ persist_with: testing_john2310_default_datagroup
 
 explore: account {}
 
-explore: billion_orders {
-  join: orders {
-    type: left_outer
-    sql_on: ${billion_orders.order_id} = ${orders.id} ;;
-    relationship: many_to_one
-  }
+#explore: billion_orders {
+#  join: orders {
+#    type: left_outer
+#    sql_on: ${billion_orders.order_id} = ${orders.id} ;;
+#    relationship: many_to_one
+#  }
 
-  join: users {
-    type: left_outer
-    sql_on: ${orders.user_id} = ${users.id} ;;
-    relationship: many_to_one
-  }
-}
+#  join: users {
+#    type: left_outer
+#    sql_on: ${orders.user_id} = ${users.id} ;;
+#    relationship: many_to_one
+#  }
+#}
 
 explore: employees {}
 
