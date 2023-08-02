@@ -1,6 +1,7 @@
 include: "/views/users.view.lkml"
 include: "/views/orders.view.lkml"
 include: "/views/billion_orders.view.lkml"
+include: "//import_block_2/Explores/*"
 explore: billion_orders {
   join: orders {
     type: left_outer
