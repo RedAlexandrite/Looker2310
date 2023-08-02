@@ -42,6 +42,6 @@ view: products {
 
   dimension: quotation_mark {
     type: string
-    sql: '/"' ;;
+    sql: "\'";;
   }
 }
