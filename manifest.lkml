@@ -7,8 +7,8 @@ project_name: "testing_john2310"
 #   project: "name_of_other_project"
 # }
 
-remote_dependency: import_block {
-  url: "git@github.com:RedAlexandrite/Looker_V230.git"
+remote_dependency: import_block_2 {
+  url: "git@github.com:RedAlexandrite/v2310_test.git"
   ref: "master"
 #  override_constant: connection {
 #    value: "thelook"
