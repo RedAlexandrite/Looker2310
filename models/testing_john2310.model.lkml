@@ -3,8 +3,6 @@ connection: "thelook"
 # include all the views
 include: "/views/**/*.view.lkml"
 
-#include: "/test.explore.lkml"
-
 include: "//import_block/Dashboards/*"
 
 datagroup: testing_john2310_default_datagroup {
