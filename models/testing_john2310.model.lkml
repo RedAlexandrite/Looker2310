@@ -3,7 +3,7 @@ connection: "thelook"
 # include all the views
 include: "/views/**/*.view.lkml"
 
-#include: "//import_block_2/Explores/*"
+include: "//import_block_2/Explores/*"
 
 include: "/Explores/test.explore.lkml"
 
