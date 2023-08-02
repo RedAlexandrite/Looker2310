@@ -39,4 +39,9 @@ view: products {
     type: count
     drill_fields: [id, item_name, inventory_items.count]
   }
+
+  dimension: quotation_mark {
+    type: string
+    sql: '/"' ;;
+  }
 }
