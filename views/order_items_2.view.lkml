@@ -1,4 +1,4 @@
-view: order_items_2 {
+view: order_items {
   sql_table_name: demo_db.order_items ;;
   #drill_fields: [id,sale_price]
 
